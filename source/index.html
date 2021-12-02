@@ -3,29 +3,30 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Седона</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body class="page__body">
         <header class="page-header">
-            <a class="page-header__logo">
+            <a class="page-header__logo-link">
                 <img class="page-header__logo-image" src="img/logo.svg" width="102" height="84" alt="Логотип сайта Седона">
             </a>
 
-            <nav class="main-nav">
-                <button class="main-nav__toggle" type="button">
+            <nav class="page-header__nav">
+                <button class="page-header__toggle" type="button">
                     <span class="visually-hidden">Открыть меню</span>
                 </button>
-                <div class="main-nav__wrapper">
-                    <ul class="main-nav__list site-list">
-                        <li class="site-list__item site-list__item--current">
+                <div class="page-header__wrapper">
+                    <ul class="page-header__list">
+                        <li class="page-header__item page-header__item--current">
                             <a>Главная</a>
                         </li>
-                        <li class="site-list__item">
+                        <li class="page-header__item">
                             <a href="catalog.html">Фото и видео</a>
                         </li>
-                        <li class="site-list__item">
+                        <li class="page-header__item">
                             <a href="form.html">Форма отзыва</a>
                         </li>
-                        <li class="site-list__item">
+                        <li class="page-header__item">
                             <a href="https://htmlacademy.ru/">html Academy</a>
                         </li>
                     </ul>
@@ -36,7 +37,11 @@
         <main class="page-main">
             <h1 class="visually-hidden">Седона - небольшой городок в Аризоне</h1>
 
-            <img class="intro__image" src="img/intro.svg" width="282" height="214" alt="Добро пожаловать в Седону">
+            <div class="intro">
+                <div class="intro__bg-wrapper">
+                    <img class="intro__image" src="img/intro.svg" width="282" height="214" alt="Добро пожаловать в Седону">
+                </div>
+            </div>
 
             <section class="advantage">
                 <div class="advantage__wrapper">
@@ -45,57 +50,61 @@
                 </div>
                 <ul class="advantage__list">
                     <li class="advantage__item">
-                        <div class="city__wrapper">
-                            <h3 class="city__title">Настоящий городок</h3>
-                            <span>&mdash;№1&mdash;</span>
-                            <p class="city__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+                        <div class="city">
+                            <div class="city__wrapper">
+                                <h3 class="city__title">Настоящий городок</h3>
+                                <span>&mdash;№1&mdash;</span>
+                                <p class="city__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+                            </div>
+                            <img class="city__image" src="img/photo-city.jpg" alt="">
+                            <ul class="city__list">
+                                <li class="city__item">
+                                    <div class="lodging">
+                                        <h4 class="lodging__title">Жилье</h4>
+                                        <p class="lodging__description">Рекомендуем пожить в настоящем мотеле, все как в кино</p>
+                                    </div>
+                                </li>
+                                <li class="city__item">
+                                    <div class="souvenirs">
+                                        <h4 class="souvenirs__title">Сувениры</h4>
+                                        <p class="souvenirs__description">Не только китайского, но и местного производства</p>
+                                    </div>
+                                </li>
+                                <li class="city__item">
+                                    <div class="food">
+                                        <h4 class="food__title">Еда</h4>
+                                        <p class="food__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <img class="city__image" src="img/photo-city.jpg" width="520" height="260" alt="">
-                        <ul class="city__list">
-                            <li class="city__item">
-                                <div class="lodging">
-                                    <h4 class="lodging__title">Жилье</h4>
-                                    <p class="lodging__description">Рекомендуем пожить в настоящем мотеле, все как в кино</p>
-                                </div>
-                            </li>
-                            <li class="city__item">
-                                <div class="souvenirs">
-                                    <h4 class="souvenirs__title">Сувениры</h4>
-                                    <p class="souvenirs__description">Не только китайского, но и местного производства</p>
-                                </div>
-                            </li>
-                            <li class="city__item">
-                                <div class="food">
-                                    <h4 class="food__title">Еда</h4>
-                                    <p class="food__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь</p>
-                                </div>
-                            </li>
-                        </ul>
                     </li>
                     <li class="advantage__item">
-                        <div class="bridge__wrapper">
-                            <h3 class="bridge__title">Там есть мост дьявола</h3>
-                            <span>&mdash;№2&mdash;</span>
-                            <p class="bridge__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                        <div class="bridge">
+                            <div class="bridge__wrapper">
+                                <h3 class="bridge__title">Там есть мост дьявола</h3>
+                                <span>&mdash;№2&mdash;</span>
+                                <p class="bridge__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                            </div>
+                            <img class="bridge__image" src="img/photo-bridge.jpg" alt="">
                         </div>
-                        <img class="bridge__image" src="img/photo-bridge.jpg" width="520" height="260" alt="">
                     </li>
                     <li class="advantage__item">
-                        <div class="area__wrapper">
+                        <div class="area">
                             <h3 class="area__title">Небольная площадь</h3>
                             <span>&mdash;№3&mdash;</span>
                             <p class="area__description">Все интересные места находятся очень близко</p>
                         </div>
                     </li>
                     <li class="advantage__item">
-                        <div class="road__wrapper">
+                        <div class="road">
                             <h3 class="road__title">Красивая дорога</h3>
                             <span>&mdash;№4&mdash;</span>
                             <p class="road__description">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
                         </div>
                     </li>
                     <li class="advantage__item">
-                        <div class="tourist__wrapper">
+                        <div class="tourist">
                             <h3 class="tourist__title">Мало туристов</h3>
                             <span>&mdash;№5&mdash;</span>
                             <p class="tourist__description">Большинство едет в Гранд Каньон и толпится там</p>
@@ -121,13 +130,21 @@
 
                     <ul class="page-footer__list">
                         <li class="page-footer__item">
-                            <span class="visually-hidden">twitter</span>
+                            <a class="page-footer__link twitter" href="#">
+                                <span class="visually-hidden">twitter</span>
+                            </a>
                         </li>
                         <li class="page-footer__item">
-                            <span class="visually-hidden">facebook</span>
+                            <a class="page-footer__link facebook" href="#">
+                                <span class="visually-hidden">facebook</span>
+                            </a>
+
                         </li>
                         <li class="page-footer__item">
-                            <span class="visually-hidden">instagram</span>
+                            <a class="page-footer__link instagram" href="#">
+                                <span class="visually-hidden">instagram</span>
+                            </a>
+
                         </li>
                     </ul>
 
