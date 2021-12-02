@@ -2,7 +2,8 @@
 <html class="page" lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>HTML Academy: Седона. Фото и видео</title>
+        <title>HTML Academy: Седона. Форма для обратной связи</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="page-header">
@@ -10,22 +11,22 @@
                 <img class="page-header__logo-image" src="img/logo.svg" width="102" height="84" alt="Логотип сайта Седона">
             </a>
 
-            <nav class="main-nav">
-                <button class="main-nav__toggle" type="button">
+            <nav class="page-header__nav">
+                <button class="page-header__toggle" type="button">
                     <span class="visually-hidden">Открыть меню</span>
                 </button>
-                <div class="main-nav__wrapper">
-                    <ul class="main-nav__list site-list">
-                        <li class="site-list__item">
+                <div class="page-header__wrapper">
+                    <ul class="page-header__list">
+                        <li class="page-header__item">
                             <a href="index.html">Главная</a>
                         </li>
-                        <li class="site-list__item">
+                        <li class="page-header__item">
                             <a href="catalog.html">Фото и видео</a>
                         </li>
-                        <li class="site-list__item site-list__item--current">
+                        <li class="page-header__item page-header__item--current">
                             <a>Форма отзыва</a>
                         </li>
-                        <li class="site-list__item">
+                        <li class="page-header__item">
                             <a href="https://htmlacademy.ru/">html Academy</a>
                         </li>
                     </ul>
@@ -35,7 +36,9 @@
 
         <main class="page-main">
             <header class="intro">
-                <img class="intro__image" src="img/sedona.svg" width="229" height="39" alt="Седона">
+                <div class="intro__bg-wrapper">
+                   <img class="intro__image" src="img/sedona.svg" width="229" height="39" alt="Седона">
+                </div>
 
                 <div class="intro__wrapper">
                     <h1 class="intro__title">Оставьте свой отзыв</h1>
@@ -112,13 +115,21 @@
 
                 <ul class="page-footer__list">
                     <li class="page-footer__item">
-                        <span class="visually-hidden">twitter</span>
+                        <a class="page-footer__link twitter" href="#">
+                            <span class="visually-hidden">twitter</span>
+                        </a>
                     </li>
                     <li class="page-footer__item">
-                        <span class="visually-hidden">facebook</span>
+                        <a class="page-footer__link facebook" href="#">
+                            <span class="visually-hidden">facebook</span>
+                        </a>
+
                     </li>
                     <li class="page-footer__item">
-                        <span class="visually-hidden">instagram</span>
+                        <a class="page-footer__link instagram" href="#">
+                            <span class="visually-hidden">instagram</span>
+                        </a>
+
                     </li>
                 </ul>
 
