@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>HTML Academy: Седона</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -15,22 +16,20 @@
                 <button class="page-header__toggle" type="button">
                     <span class="visually-hidden">Открыть меню</span>
                 </button>
-                <div class="page-header__wrapper">
-                    <ul class="page-header__list">
-                        <li class="page-header__item page-header__item--current">
-                            <a>Главная</a>
-                        </li>
-                        <li class="page-header__item">
-                            <a href="catalog.html">Фото и видео</a>
-                        </li>
-                        <li class="page-header__item">
-                            <a href="form.html">Форма отзыва</a>
-                        </li>
-                        <li class="page-header__item">
-                            <a href="https://htmlacademy.ru/">html Academy</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="page-header__list">
+                    <li class="page-header__item page-header__item--current left-column">
+                        <a>Главная</a>
+                    </li>
+                    <li class="page-header__item left-column">
+                        <a href="catalog.html">Фото и видео</a>
+                    </li>
+                    <li class="page-header__item right-column">
+                        <a href="form.html">Форма отзыва</a>
+                    </li>
+                    <li class="page-header__item right-column">
+                        <a href="https://htmlacademy.ru/">html Academy</a>
+                    </li>
+                </ul>
             </nav>
         </header>
 
@@ -49,7 +48,7 @@
                     <p class="advantage__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
                 </div>
                 <ul class="advantage__list">
-                    <li class="advantage__item">
+                    <li class="advantage__item  advantage__city">
                         <div class="city">
                             <div class="city__wrapper">
                                 <h3 class="city__title">Настоящий городок</h3>
@@ -79,31 +78,31 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="advantage__item">
+                    <li class="advantage__item advantage__bridge">
                         <div class="bridge">
+                            <img class="bridge__image" src="img/photo-bridge.jpg" alt="">
                             <div class="bridge__wrapper">
                                 <h3 class="bridge__title">Там есть мост дьявола</h3>
                                 <span>&mdash;№2&mdash;</span>
                                 <p class="bridge__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
                             </div>
-                            <img class="bridge__image" src="img/photo-bridge.jpg" alt="">
                         </div>
                     </li>
-                    <li class="advantage__item">
+                    <li class="advantage__item advantage__area">
                         <div class="area">
                             <h3 class="area__title">Небольная площадь</h3>
                             <span>&mdash;№3&mdash;</span>
                             <p class="area__description">Все интересные места находятся очень близко</p>
                         </div>
                     </li>
-                    <li class="advantage__item">
+                    <li class="advantage__item advantage__road">
                         <div class="road">
                             <h3 class="road__title">Красивая дорога</h3>
                             <span>&mdash;№4&mdash;</span>
                             <p class="road__description">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
                         </div>
                     </li>
-                    <li class="advantage__item">
+                    <li class="advantage__item advantage__tourist">
                         <div class="tourist">
                             <h3 class="tourist__title">Мало туристов</h3>
                             <span>&mdash;№5&mdash;</span>
@@ -138,13 +137,11 @@
                             <a class="page-footer__link facebook" href="#">
                                 <span class="visually-hidden">facebook</span>
                             </a>
-
                         </li>
                         <li class="page-footer__item">
                             <a class="page-footer__link instagram" href="#">
                                 <span class="visually-hidden">instagram</span>
                             </a>
-
                         </li>
                     </ul>
 
