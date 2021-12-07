@@ -9,7 +9,7 @@
 
     &__title {
         font-size: 18px;
-        
+
         margin: 0;
         padding: 0;
     }
@@ -25,5 +25,12 @@
 
         list-style-type: none;
         background-color: #ffffff;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .bridge {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
     }
 }
