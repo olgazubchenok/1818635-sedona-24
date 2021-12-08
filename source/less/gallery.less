@@ -5,5 +5,41 @@
 
     &__list {
         list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .gallery {
+        padding: 0 60px;
+
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 480px 347px;
+        }
+
+        &__item:first-child {
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+
+@media (min-width: @desktop-width) {
+    .gallery {
+        padding: 0;
+
+
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 400px 267px;
+        }
+
+        &__item:first-child {
+            grid-column: 1 / -1;
+        }
     }
 }
