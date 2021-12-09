@@ -48,53 +48,6 @@
             </header>
 
             <form class="feedback-form">
-                <div class="feedback-form__container">
-                    <fieldset class="feedback-form__group feedback-form__impression">
-                        <legend class="feedback-form__title">Ваше общее впечатление:</legend>
-                        <ul class="feedback-form__list">
-                            <li class="feedback-form__item">
-                                <label class="feedback-form__radio-label">
-                                    <input type="radio" name="user-impression" value="good" checked>
-                                Скорее положительно</label>
-                            </li>
-                            <li class="feedback-form__item">
-                                <label class="feedback-form__radio-label">
-                                    <input type="radio" name="user-impression" value="bad">
-                                Скорее отрицательно</label>
-                            </li>
-                            <li class="feedback-form__item">
-                                <label class="feedback-form__radio-label">
-                                    <input type="radio" name="user-impression" value="don't know">
-                                Затрудняюсь ответить</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-
-                    <fieldset class="feedback-form__group">
-                        <legend class="feedback-form__title">Представьтесь:</legend>
-                        <label class="feedback-form__label">Имя<sup>*</sup>:
-                            <input type="text" name="user-name" required placeholder="Петор">
-                        </label>
-                        <label class="feedback-form__label">Фамилия<sup>*</sup>:
-                            <input type="text" name="user-second-name" required placeholder="Иванов">
-                        </label>
-                        <label class="feedback-form__label">Отчество:
-                            <input type="text" name="user-patronymic-name" placeholder="Александрович">
-                        </label>
-                    </fieldset>
-                </div>
-
-
-                <fieldset class="feedback-form__group">
-                    <legend class="feedback-form__title">Контактная информация:</legend>
-                    <label class="feedback-form__label feedback-form__contacts"><span><span class="feedback-form__contacts--hidden">Контактный</span> телефон<sup>*</sup>:</span>
-                        <input type="phone" name="user-phone" required placeholder="Введите телефон">
-                    </label>
-                    <label class="feedback-form__label feedback-form__contacts"><span>Электронная почта<sup>*</sup>:</span>
-                        <input type="email" name="user-email" required placeholder="Введите e-mail">
-                    </label>
-                </fieldset>
-
                 <fieldset class="feedback-form__group feedback-form__impression">
                     <legend class="feedback-form__title">Ваше общее впечатление:</legend>
                     <ul class="feedback-form__list">
@@ -116,8 +69,31 @@
                     </ul>
                 </fieldset>
 
+                <fieldset class="feedback-form__group feedback-form__user-name">
+                    <legend class="feedback-form__title">Представьтесь:</legend>
+                    <label class="feedback-form__label">Имя<sup>*</sup>:
+                        <input type="text" name="user-name" required placeholder="Петор">
+                    </label>
+                    <label class="feedback-form__label">Фамилия<sup>*</sup>:
+                        <input type="text" name="user-second-name" required placeholder="Иванов">
+                    </label>
+                    <label class="feedback-form__label">Отчество:
+                        <input type="text" name="user-patronymic-name" placeholder="Александрович">
+                    </label>
+                </fieldset>
+
                 <fieldset class="feedback-form__group">
-                    <legend class="feedback-form__title">Ваше общее впечатление:</legend>
+                    <legend class="feedback-form__title">Контактная информация:</legend>
+                    <label class="feedback-form__label feedback-form__contacts"><span><span class="feedback-form__contacts--hidden">Контактный</span> телефон<sup>*</sup>:</span>
+                        <input type="phone" name="user-phone" required placeholder="Введите телефон">
+                    </label>
+                    <label class="feedback-form__label feedback-form__contacts"><span>Электронная почта<sup>*</sup>:</span>
+                        <input type="email" name="user-email" required placeholder="Введите e-mail">
+                    </label>
+                </fieldset>
+
+                <fieldset class="feedback-form__group feedback-form__attraction">
+                    <legend class="feedback-form__title">Посещенные достопримечательности:</legend>
                     <ul class="feedback-form__list feedback-form__checkbox-group">
                         <li class="feedback-form__item">
                             <label class="feedback-form__checkbox-label">
@@ -147,12 +123,12 @@
 
                 </fieldset>
 
-                <fieldset class="feedback-form__group">
+                <fieldset class="feedback-form__group feedback-form__emotions">
                     <legend class="feedback-form__title">Опишите свои эмоции:</legend>
                     <textarea type="text" name="comment" placeholder="Опишите свои восторги"></textarea>
                 </fieldset>
 
-                <div class="feedback-form__group feedback-form__group--row">
+                <div class="feedback-form__group feedback-form__group--row feedback-form__button-group">
                     <input class="feedback-form__button" type="submit" value="Отправить отзыв">
                     <span class="feedback-form__qualification"><sup>*</sup> — обязательные поля</span>
                 </div>
