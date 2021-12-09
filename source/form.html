@@ -18,16 +18,16 @@
                 </button>
                 <div class="page-header__wrapper">
                     <ul class="page-header__list">
-                        <li class="page-header__item">
+                        <li class="page-header__item left-column">
                             <a href="index.html">Главная</a>
                         </li>
-                        <li class="page-header__item">
+                        <li class="page-header__item left-column">
                             <a href="catalog.html">Фото и видео</a>
                         </li>
-                        <li class="page-header__item page-header__item--current">
+                        <li class="page-header__item page-header__item--current right-column">
                             <a>Форма отзыва</a>
                         </li>
-                        <li class="page-header__item">
+                        <li class="page-header__item right-column">
                             <a href="https://htmlacademy.ru/">html Academy</a>
                         </li>
                     </ul>
@@ -48,7 +48,28 @@
             </header>
 
             <form class="feedback-form">
-                <fieldset class="feedback-form__group">
+                <fieldset class="feedback-form__group feedback-form__impression">
+                    <legend class="feedback-form__title">Ваше общее впечатление:</legend>
+                    <ul class="feedback-form__list">
+                        <li class="feedback-form__item">
+                            <label class="feedback-form__radio-label">
+                                <input type="radio" name="user-impression" value="good" checked>
+                            Скорее положительно</label>
+                        </li>
+                        <li class="feedback-form__item">
+                            <label class="feedback-form__radio-label">
+                                <input type="radio" name="user-impression" value="bad">
+                            Скорее отрицательно</label>
+                        </li>
+                        <li class="feedback-form__item">
+                            <label class="feedback-form__radio-label">
+                                <input type="radio" name="user-impression" value="don't know">
+                            Затрудняюсь ответить</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="feedback-form__group feedback-form__user-name">
                     <legend class="feedback-form__title">Представьтесь:</legend>
                     <label class="feedback-form__label">Имя<sup>*</sup>:
                         <input type="text" name="user-name" required placeholder="Петор">
@@ -63,49 +84,54 @@
 
                 <fieldset class="feedback-form__group">
                     <legend class="feedback-form__title">Контактная информация:</legend>
-                    <label class="feedback-form__label">Контактный телефон<sup>*</sup>:
+                    <label class="feedback-form__label feedback-form__contacts"><span><span class="feedback-form__contacts--hidden">Контактный</span> телефон<sup>*</sup>:</span>
                         <input type="phone" name="user-phone" required placeholder="Введите телефон">
                     </label>
-                    <label class="feedback-form__label">Электронная почта<sup>*</sup>:
+                    <label class="feedback-form__label feedback-form__contacts"><span>Электронная почта<sup>*</sup>:</span>
                         <input type="email" name="user-email" required placeholder="Введите e-mail">
                     </label>
                 </fieldset>
 
-                <fieldset class="feedback-form__group">
-                    <legend class="feedback-form__title">Ваше общее впечатление:</legend>
-                    <label class="feedback-form__radio-label">
-                        <input type="radio" name="user-impression" value="good" checked>
-                    Скорее положительно</label>
-                    <label class="feedback-form__radio-label">
-                        <input type="radio" name="user-impression" value="bad">
-                    Скорее отрицательно</label>
-                    <label class="feedback-form__radio-label">
-                        <input type="radio" name="user-impression" value="don't know">
-                    Затрудняюсь ответить</label>
+                <fieldset class="feedback-form__group feedback-form__attraction">
+                    <legend class="feedback-form__title">Посещенные достопримечательности:</legend>
+                    <ul class="feedback-form__list feedback-form__checkbox-group">
+                        <li class="feedback-form__item">
+                            <label class="feedback-form__checkbox-label">
+                                <input type="checkbox" name="devils-bridge" checked>
+                                Мост Дьявола
+                            </label>
+                        </li>
+                        <li class="feedback-form__item">
+                            <label class="feedback-form__checkbox-label">
+                                <input type="checkbox" name="mount-bell" checked>
+                                Гора-Колокол
+                            </label>
+                        </li>
+                        <li class="feedback-form__item">
+                            <label class="feedback-form__checkbox-label">
+                                <input type="checkbox" name="slide-park" checked>
+                                Слайд-парк
+                            </label>
+                        </li>
+                        <li class="feedback-form__item">
+                            <label class="feedback-form__checkbox-label">
+                                <input type="checkbox" name="red-rocks">
+                                Красные скалы
+                            </label>
+                        </li>
+                    </ul>
+
                 </fieldset>
 
-                <fieldset class="feedback-form__group">
-                    <legend class="feedback-form__title">Ваше общее впечатление:</legend>
-                    <label class="feedback-form__checkbox-label">
-                        <input type="checkbox" name="devils-bridge" checked>
-                    Мост Дьявола</label>
-                    <label class="feedback-form__checkbox-label">
-                        <input type="checkbox" name="mount-bell" checked>
-                    Гора-Колокол</label>
-                    <label class="feedback-form__checkbox-label">
-                        <input type="checkbox" name="slide-park" checked>
-                    Слайд-парк</label>
-                    <label class="feedback-form__checkbox-label">
-                        <input type="checkbox" name="red-rocks">
-                    Красные скалы</label>
-                </fieldset>
-
-                <fieldset class="feedback-form__group">
+                <fieldset class="feedback-form__group feedback-form__emotions">
                     <legend class="feedback-form__title">Опишите свои эмоции:</legend>
                     <textarea type="text" name="comment" placeholder="Опишите свои восторги"></textarea>
                 </fieldset>
 
-                <input class="feedback-form__button" type="submit" value="Отправить отзыв">
+                <div class="feedback-form__group feedback-form__group--row feedback-form__button-group">
+                    <input class="feedback-form__button" type="submit" value="Отправить отзыв">
+                    <span class="feedback-form__qualification"><sup>*</sup> — обязательные поля</span>
+                </div>
             </form>
 
         </main>
