@@ -1,15 +1,22 @@
 .intro {
-    padding: 90px 0 85px 0;
+
+    margin-bottom: 32px;
+    background-color: @intro-background;
+    background-image: url("../img/back-intro.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+
 
     &__title {
         font-size: 18px;
     }
 
     &__bg-wrapper {
-        background-color: @intro-background;
-        background-image: url("../img/back-intro.jpg");
+        min-height: 389px;
+
+        background-image: url(../img/intro-triangle.svg);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: bottom center;
     }
 
     &__wrapper {
@@ -18,5 +25,19 @@
 
     &__image {
         margin: 0 auto;
+        margin-top: 90px;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .intro {
+        &__bg-wrapper {
+            min-height: 518px;
+        }
+
+        &__image {
+            margin: 0 auto;
+            margin-top: 77px;
+        }
     }
 }

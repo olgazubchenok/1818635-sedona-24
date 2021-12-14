@@ -1,9 +1,13 @@
 .tourist {
+    width: 90%;
+
+    margin: 0 auto;
+    padding-bottom: 25px;
     background-color: @light-grey;
 
     &__title {
         font-size: 18px;
-        
+
         margin: 0;
         padding: 0;
     }
@@ -11,5 +15,31 @@
     &__description {
         margin: 0;
         padding: 0;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .tourist {
+        width: 60%;
+
+        margin: 0;
+        padding: 0;
+        padding-top: 35px;
+        padding-bottom: 39px;
+
+        &__title {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        &__description {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .tourist {
+        width: 70%;
     }
 }
