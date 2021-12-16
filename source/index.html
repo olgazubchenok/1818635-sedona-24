@@ -12,10 +12,7 @@
                 <img class="page-header__logo-image" src="img/logo.svg" width="102" height="84" alt="Логотип сайта Седона">
             </a>
 
-            <nav class="page-header__nav">
-                <button class="page-header__toggle" type="button">
-                    <span class="visually-hidden">Открыть меню</span>
-                </button>
+            <nav class="page-header__nav page-header__nav--closed">
                 <ul class="page-header__list">
                     <li class="page-header__item page-header__item--current left-column">
                         <a>Главная</a>
@@ -30,6 +27,9 @@
                         <a href="https://htmlacademy.ru/">html Academy</a>
                     </li>
                 </ul>
+                <button class="page-header__toggle" type="button">
+                    <span class="visually-hidden">Открыть меню</span>
+                </button>
             </nav>
         </header>
 
@@ -57,19 +57,19 @@
                             </div>
                             <img class="city__image" src="img/photo-city.jpg" alt="">
                             <ul class="city__list">
-                                <li class="city__item">
+                                <li class="city__item  city__item-lodging">
                                     <div class="lodging">
                                         <h4 class="lodging__title">Жилье</h4>
                                         <p class="lodging__description">Рекомендуем пожить в настоящем мотеле, все как в кино</p>
                                     </div>
                                 </li>
-                                <li class="city__item">
+                                <li class="city__item city__item-souvenirs">
                                     <div class="souvenirs">
                                         <h4 class="souvenirs__title">Сувениры</h4>
                                         <p class="souvenirs__description">Не только китайского, но и местного производства</p>
                                     </div>
                                 </li>
-                                <li class="city__item">
+                                <li class="city__item city__item-food">
                                     <div class="food">
                                         <h4 class="food__title">Еда</h4>
                                         <p class="food__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь</p>
@@ -129,18 +129,18 @@
 
                     <ul class="page-footer__list">
                         <li class="page-footer__item">
-                            <a class="page-footer__link twitter" href="#">
+                            <a class="page-footer__link page-footer__twitter" href="#">
                                 <span class="visually-hidden">twitter</span>
                             </a>
                         </li>
                         <li class="page-footer__item">
-                            <a class="page-footer__link facebook" href="#">
+                            <a class="page-footer__link page-footer__facebook" href="#">
                                 <span class="visually-hidden">facebook</span>
                             </a>
                         </li>
                         <li class="page-footer__item">
-                            <a class="page-footer__link instagram" href="#">
-                                <span class="visually-hidden">instagram</span>
+                            <a class="page-footer__link page-footer__youtube" href="#">
+                                <span class="visually-hidden">youtube</span>
                             </a>
                         </li>
                     </ul>

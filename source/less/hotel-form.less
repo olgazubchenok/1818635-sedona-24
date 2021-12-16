@@ -1,32 +1,49 @@
 .hotel-form {
-    margin: 0 20px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 49px;
 
     &__title {
-        font-size: 18px;
+        font-size: 21px;
 
         margin: 0;
         padding: 0;
+        margin-bottom: 25px;
     }
 
     &__description {
         margin: 0;
         padding: 0;
+        margin-bottom: 27px;
+        max-width: 435px;
     }
 
     &__button {
         font-family: inherit;
         font-size: 21px;
+        font-weight: 700;
         text-transform: uppercase;
         text-align: center;
         color: #ffffff;
         cursor: pointer;
 
-
-        padding: 0;
+        width: 90%;
+        min-height: 58px;
         margin: 0;
+        padding: 14px;
 
         border: none;
 
         background-color: @light-blue;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .hotel-form {
+        width: 60%;
+        max-width: 458px;
+        &__title {
+            font-size: 30px;
+        }
     }
 }
