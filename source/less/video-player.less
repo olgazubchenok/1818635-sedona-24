@@ -1,0 +1,101 @@
+.video-player {
+    position: relative;
+    &__video {
+        width: 100%;
+    }
+
+    &__wrapper {
+        position: relative;
+        bottom: 54px;
+
+        width: 100%;
+    }
+
+    &__control-panel {
+        position: absolute;
+        width: 100%;
+        margin: 0 5%;
+        min-height: 45px;
+        background-color: fade(#000000, 60%);
+    }
+
+    &__scale {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        height: 3px;
+        width: 90%;
+        background-color: fade(#ffffff, 20%);
+    }
+
+    &__control {
+        position: absolute;
+        top: -170%;
+        left: 15%;
+        height: 13px;
+        width: 13px;
+        padding: 0;
+        border-radius: 50%;
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 0 5%;
+        padding: 0 5%;
+        min-height: 66px;
+        background-color: @light-grey;
+    }
+
+    &__button {
+        border: none;
+        background-color: inherit;
+        padding: 0;
+
+        cursor: pointer;
+    }
+
+    &__column &__button:first-child {
+        margin-right: 31px;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .video-player {
+        padding: 0 5%;
+        width: 90%;
+
+        &__control-panel {
+            margin: 0;
+            min-height: 93px;
+            transform: translateY(-50%);
+        }
+
+        &__scale {
+            width: 70%;
+            left: 10%;
+        }
+
+        &__row {
+            position: absolute;
+            top: -27px;
+            left: 0;
+            width: 90%;
+            padding: 0;
+            background-color: transparent;
+        }
+
+        &__button-replay {
+            transform: translateY(-5px);
+        }
+
+        &__button path {
+            fill: #ffffff;
+        }
+    }
+}

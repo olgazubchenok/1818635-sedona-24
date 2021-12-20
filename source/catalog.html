@@ -8,37 +8,35 @@
     </head>
     <body>
         <header class="page-header">
-            <a class="page-header__logo" href="index.html">
+            <a class="page-header__logo-link" href="index.html">
                 <img class="page-header__logo-image" src="img/logo.svg" width="102" height="84" alt="Логотип сайта Седона">
             </a>
 
-            <nav class="page-header__nav">
+            <nav class="page-header__nav page-header__nav--closed">
+                <ul class="page-header__list">
+                    <li class="page-header__item left-column">
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li class="page-header__item page-header__item--current left-column">
+                        <a>Фото и видео</a>
+                    </li>
+                    <li class="page-header__item right-column">
+                        <a href="form.html">Форма отзыва</a>
+                    </li>
+                    <li class="page-header__item right-column">
+                        <a href="https://htmlacademy.ru/">html Academy</a>
+                    </li>
+                </ul>
                 <button class="page-header__toggle" type="button">
                     <span class="visually-hidden">Открыть меню</span>
                 </button>
-                <div class="page-header__wrapper">
-                    <ul class="page-header__list">
-                        <li class="page-header__item left-column">
-                            <a href="index.html">Главная</a>
-                        </li>
-                        <li class="page-header__item page-header__item--current left-column">
-                            <a>Фото и видео</a>
-                        </li>
-                        <li class="page-header__item right-column">
-                            <a href="form.html">Форма отзыва</a>
-                        </li>
-                        <li class="page-header__item right-column">
-                            <a href="https://htmlacademy.ru/">html Academy</a>
-                        </li>
-                    </ul>
-                </div>
             </nav>
         </header>
 
         <main class="page-main">
-            <header class="intro">
-                <div class="intro__bg-wrapper">
-                   <img class="intro__image" src="img/sedona.svg" width="229" height="39" alt="Седона">
+            <header class="intro inner-intro">
+                <div class="intro__bg-wrapper inner-intro__bg-wrapper">
+                   <img class="intro__image inner-intro__image" src="img/sedona.svg" width="229" height="39" alt="Седона">
                 </div>
 
                 <div class="intro__wrapper">
@@ -50,8 +48,8 @@
             <section class="gallery">
                 <ul class="gallery__list">
                     <li class="gallery__item">
+                        <img class="gallery__image" src="img/gallery-1.jpg" width="280" height="280" alt="">
                         <div class="gallery__wrapper">
-                            <img class="gallery__image" src="img/gallery-1.jpg" width="1200" height="400" alt="">
                             <h2 class="gallery__title">Неродные просторы</h2>
                             <span class="gallery__author">Автор фото: Борис</span>
                             <div class="gallery__like">
@@ -61,8 +59,8 @@
                         </div>
                     </li>
                     <li class="gallery__item">
+                        <img class="gallery__image" src="img/gallery-2.jpg" width="280" height="280" alt="">
                         <div class="gallery__wrapper">
-                            <img class="gallery__image" src="img/gallery-2.jpg" width="400" height="267" alt="">
                             <h2 class="gallery__title">Местная растительность</h2>
                             <span class="gallery__author">Автор фото: Сергей</span>
                             <div class="gallery__like">
@@ -72,8 +70,8 @@
                         </div>
                     </li>
                     <li class="gallery__item">
-                        <div class="gallery__wrapper">
-                            <img class="gallery__image" src="img/gallery-3.jpg" width="400" height="267" alt="">
+                        <img class="gallery__image" src="img/gallery-3.jpg" width="280" height="280" alt="">
+                        <div class="gallery__wrapper gallery__wrapper--dark-bg">
                             <h2 class="gallery__title">Дорога на север</h2>
                             <span class="gallery__author">Автор фото: Петр</span>
                             <div class="gallery__like">
@@ -83,8 +81,8 @@
                         </div>
                     </li>
                     <li class="gallery__item">
+                        <img class="gallery__image" src="img/gallery-4.jpg" width="280" height="280" alt="">
                         <div class="gallery__wrapper">
-                            <img class="gallery__image" src="img/gallery-4.jpg" width="400" height="267" alt="">
                             <h2 class="gallery__title">Мост дьявола</h2>
                             <span class="gallery__author">Автор фото: Антон</span>
                             <div class="gallery__like">
@@ -102,20 +100,20 @@
                     <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
                 </div>
                 <div class="video-player">
-                    <video class="video-player__video" width="320" height="201" poster="img/video-cut.jpg">
+                    <video class="video-player__video" poster="img/video-cut.jpg">
                         <source src="" type="video/ogg">
                         <source src="" type="video/mp4">
                         <source src="" type="video/webm">
                     </video>
                     <div class="video-player__wrapper">
-                        <div class="video-player__row video-player__control-panel">
+                        <div class="video-player__control-panel">
                             <div class="video-player__scale">
                                 <button class="video-player__control"><span class="visually-hidden">Ползунок</span></button>
                             </div>
                         </div>
 
                         <div class="video-player__row">
-                            <button class="video-player__button">
+                            <button class="video-player__button video-player__button-replay">
                                 <span class="visually-hidden">Заново запустить видео</span>
                                 <svg class="video-player__replay" aria-hidden="true" focusable="false" width="16" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 4V0L3 5l5 5V6c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6H0c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8Z" fill="#5C6870"/></svg>
                             </button>
@@ -143,21 +141,19 @@
 
                 <ul class="page-footer__list">
                     <li class="page-footer__item">
-                        <a class="page-footer__link twitter" href="#">
+                        <a class="page-footer__link page-footer__twitter" href="#">
                             <span class="visually-hidden">twitter</span>
                         </a>
                     </li>
                     <li class="page-footer__item">
-                        <a class="page-footer__link facebook" href="#">
+                        <a class="page-footer__link page-footer__facebook" href="#">
                             <span class="visually-hidden">facebook</span>
                         </a>
-
                     </li>
                     <li class="page-footer__item">
-                        <a class="page-footer__link instagram" href="#">
-                            <span class="visually-hidden">instagram</span>
+                        <a class="page-footer__link page-footer__youtube" href="#">
+                            <span class="visually-hidden">youtube</span>
                         </a>
-
                     </li>
                 </ul>
 
