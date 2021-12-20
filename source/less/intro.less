@@ -1,5 +1,4 @@
 .intro {
-
     margin-bottom: 32px;
     background-color: @intro-background;
     background-image: url("../img/back-intro.jpg");
@@ -9,6 +8,15 @@
 
     &__title {
         font-size: 18px;
+        max-width: 458px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__description {
+        max-width: 458px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__bg-wrapper {
@@ -20,12 +28,27 @@
     }
 
     &__wrapper {
+        padding-top: 36px;
+        padding-bottom: 20px;
+        padding-right: 5%;
+        padding-left: 5%;
         background-color: #ffffff;
     }
 
     &__image {
         margin: 0 auto;
         margin-top: 90px;
+    }
+}
+
+/*Внутренние*/
+.inner-intro {
+    &__bg-wrapper {
+        min-height: 158px;
+    }
+
+    &__image {
+        margin-top: 50px;
     }
 }
 
@@ -38,6 +61,26 @@
         &__image {
             margin: 0 auto;
             margin-top: 77px;
+        }
+    }
+
+    /*Внутренние*/
+    .inner-intro {
+        &__bg-wrapper{
+            min-height: 289px;
+        }
+
+        &__image {
+            margin-top: 95px;
+        }
+
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .intro {
+        &__title {
+            margin-top: 102px;
         }
     }
 }
