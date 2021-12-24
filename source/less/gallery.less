@@ -38,6 +38,14 @@
 
     &__icon {
         padding-right: 14px;
+        cursor: pointer;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
     }
 }
 
@@ -60,6 +68,11 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            background-color: @light-grey;
+        }
+
+        &__item--dark-bg {
+            background-color: darken(@light-grey, 5%);
         }
 
         &__item:first-child {
@@ -69,15 +82,11 @@
         &__wrapper {
             position: relative;
             padding: 0;
-            background-color: @light-grey;
-        }
-
-        &__wrapper--dark-bg {
-            background-color: darken(@light-grey, 5%);
+            height: 80px;
         }
 
         &__title {
-            margin: 0;
+            margin: auto 0;
             margin-left: 20px;
             font-size: 14px;
             line-height: 24px;
@@ -101,6 +110,11 @@
 
         &__icon {
             padding-right: 5px;
+        }
+
+        &__image {
+            width: 100%;
+            height: fit-content;
         }
     }
 }
@@ -140,6 +154,7 @@
 
         &__like path {
             fill: #ffffff;
+            opacity: 1;
         }
     }
 }

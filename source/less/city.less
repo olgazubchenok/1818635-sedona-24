@@ -1,13 +1,13 @@
 .city {
-    background-color: @light-blue;
 
     &__wrapper {
         width: 90%;
-        margin: 0 auto;
+        padding: 0 5%;
         padding-top: 35px;
         padding-bottom: 39px;
 
         color: #ffffff;
+        background-color: @light-blue;
     }
 
     &__title {
@@ -23,9 +23,12 @@
     }
 
     &__image {
+        display: b;
         height: 260px;
         padding: 0;
         margin: 0;
+        width: 100%;
+        object-fit: cover;
     }
 
     &__list {
@@ -49,6 +52,7 @@
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 256px 330px;
+        background-color: @light-blue;
 
         &__wrapper {
             width: 80%;
@@ -68,6 +72,7 @@
 
             display: flex;
             justify-content: space-around;
+            padding: 0;
         }
 
         &__item {

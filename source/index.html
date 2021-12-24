@@ -5,11 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>HTML Academy: Седона</title>
         <link rel="stylesheet" href="css/style.css">
+
+            <link rel="icon" href="favicon.ico">
+            <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
+            <link rel="apple-touch-icon" href="img/favicon/apple.png">
+            <link rel="manifest" href="manifest.webmanifest">
     </head>
     <body class="page__body">
         <header class="page-header">
             <a class="page-header__logo-link">
-                <img class="page-header__logo-image" src="img/logo.svg" width="102" height="84" alt="Логотип сайта Седона">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                    <img class="page-header__logo-image" src="img/logo.svg" width="102" height="84" alt="Логотип сайта Седона">
+                </picture>
             </a>
 
             <nav class="page-header__nav page-header__nav--closed">
@@ -55,7 +64,10 @@
                                 <span>&mdash;№1&mdash;</span>
                                 <p class="city__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
                             </div>
-                            <img class="city__image" src="img/photo-city.jpg" alt="">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="img/tablet/photo-city.jpg 1x, img/tablet/photo-city@2x.jpg 2x">
+                                <img class="city__image" src="img/photo-city.jpg" srcset="img/photo-city@2x.jpg" alt="Фото города">
+                            </picture>
                             <ul class="city__list">
                                 <li class="city__item  city__item-lodging">
                                     <div class="lodging">
@@ -80,12 +92,15 @@
                     </li>
                     <li class="advantage__item advantage__bridge">
                         <div class="bridge">
-                            <img class="bridge__image" src="img/photo-bridge.jpg" alt="">
                             <div class="bridge__wrapper">
                                 <h3 class="bridge__title">Там есть мост дьявола</h3>
                                 <span>&mdash;№2&mdash;</span>
                                 <p class="bridge__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
                             </div>
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="img/tablet/photo-bridge.jpg 1x, img/tablet/photo-bridge@2x.jpg 2x">
+                                <img class="bridge__image" src="img/photo-bridge.jpg" srcset="img/photo-bridge@2x.jpg" alt="Мост дьявола">
+                            </picture>
                         </div>
                     </li>
                     <li class="advantage__item advantage__area">
@@ -119,7 +134,7 @@
             </section>
 
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.13565752865!2d-111.83015805709337!3d34.854443815618865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1638873586192!5m2!1sru!2sru" width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.13565752865!2d-111.83015805709337!3d34.854443815618865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1638873586192!5m2!1sru!2sru" width="320" height="350" allowfullscreen title="Седона, штат Аризона"></iframe>
             </div>
         </main>
 
@@ -147,7 +162,7 @@
 
                     <span class="page-footer__copyright">Разработано
                         <a class="page-footer__copyright-link">
-                            <img src="img/htmlacademy.svg" width="27" height="34" alt="логотип html-academy">
+                            <svg width="27" height="35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z" fill="#000"/></svg>
                         </a>
                     </span>
                 </div>
