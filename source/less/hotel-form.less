@@ -8,14 +8,17 @@
 
         margin: 0;
         padding: 0;
-        margin-bottom: 25px;
+        margin-bottom: 21px;
+        padding-top: 2px;
     }
 
     &__description {
         margin: 0;
         padding: 0;
-        margin-bottom: 27px;
+        margin-bottom: 28px;
         max-width: 435px;
+
+        line-height: 24px;
     }
 
     &__button {
@@ -27,7 +30,7 @@
         color: #ffffff;
         cursor: pointer;
 
-        width: 90%;
+        width: 97%;
         min-height: 58px;
         margin: 0;
         padding: 14px;
@@ -36,14 +39,52 @@
 
         background-color: @light-blue;
     }
+
+    &__button:hover {
+        background-color: darken(@light-blue, 20%);
+    }
+
+    &__button:active {
+        background-color: darken(@light-blue, 30%);
+        color: fade(#ffffff, 30%);
+    }
+
+    &__button:disabled {
+        background-color: @light-grey;
+    }
 }
 
 @media (min-width: @tablet-width) {
     .hotel-form {
-        width: 60%;
-        max-width: 458px;
+        max-width: 472px;
+
+        padding-top: 22px;
+        padding-bottom: 10px;
+
         &__title {
             font-size: 30px;
+            padding-bottom: 13px;
+        }
+
+        &__description {
+            margin: 0 auto;
+            margin-bottom: 38px;
+        }
+
+        &__description span {
+            display: block;
+        }
+    }
+}
+
+
+@media (min-width: @desktop-width) {
+    .hotel-form {
+        padding-bottom: 17px;
+
+        &__description {
+            margin: 0 auto;
+            margin-bottom: 43px;
         }
     }
 }

@@ -1,12 +1,16 @@
 .gallery {
+
     &__title {
-        font-size: 18px;
-        margin: 10px 0;
+        font-size: 14px;
+        margin: 0;
+        margin-top: 41px;
+        margin-bottom: -1px;
         padding: 0;
     }
 
     &__author {
-        text-transform: capitalize;
+        margin: 0;
+        text-transform: none;
     }
 
     &__list {
@@ -18,7 +22,8 @@
     &__item {
         padding: 0;
         margin: 0;
-        padding: 21px 5%;
+        padding: 21px 6%;
+        padding-bottom: 16px;
         border-top: 1px solid @light-grey;
     }
 
@@ -33,11 +38,16 @@
     }
 
     &__like {
+        display: flex;
         margin-top: 10px;
     }
 
+    &__like span {
+        display: block;
+    }
+
     &__icon {
-        padding-right: 14px;
+        padding-right: 15px;
         cursor: pointer;
     }
 
@@ -52,6 +62,7 @@
 @media (min-width: @tablet-width) {
     .gallery {
         padding: 0 60px;
+        margin-top: 78px;
 
         &__list {
             display: grid;
@@ -86,7 +97,8 @@
         }
 
         &__title {
-            margin: auto 0;
+            margin-top: 15px;
+            margin-bottom: 1px;
             margin-left: 20px;
             font-size: 14px;
             line-height: 24px;
@@ -102,19 +114,26 @@
 
         &__like {
             position: absolute;
-            right: 20px;
+            right: 0;
             bottom: 23px;
             align-self: flex-end;
             margin: 0;
+            margin-bottom: 3px;
+            min-width: 85px;
         }
 
         &__icon {
-            padding-right: 5px;
+            padding-right: 10px;
         }
 
         &__image {
             width: 100%;
-            height: fit-content;
+            height: 267px;
+            object-fit: cover;
+        }
+
+        &__image-first {
+            height: 400px;
         }
     }
 }
@@ -123,6 +142,9 @@
 @media (min-width: @desktop-width) {
     .gallery {
         padding: 0;
+        margin: 0;
+        margin-bottom: 60px;
+        margin-top: 81px;
 
         &__list {
             display: grid;
@@ -149,12 +171,16 @@
         }
 
         &__title {
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         &__like path {
             fill: #ffffff;
             opacity: 1;
+        }
+
+        &__intro-title {
+            margin-top: 102px;
         }
     }
 }

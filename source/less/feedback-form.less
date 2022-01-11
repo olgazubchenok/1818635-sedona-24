@@ -4,6 +4,9 @@
 
     border-top: 1px solid @light-grey;
 
+    margin-top: 17px;
+    margin-bottom: 29px;
+
     &__title {
         font-size: 18px;
         padding-top: 20px;
@@ -32,39 +35,67 @@
     &__group input,
     &__group textarea {
         background-color: @light-grey;
-        border: none;
-        padding: 14px 22px;
+        border: 4px solid @light-grey;
+        padding: 15px 25px;
         font-size: inherit;
+        font-family: inherit;
         font-weight: 700;
-        font-size: 18px;
-        line-height: 26px;
+        font-size: 16px;
         color: #000000;
     }
+
+    &__group input:hover {
+        &:not([type="submit"]){
+        border: 4px solid #E5E5E5;
+        background-color: #E5E5E5;
+        }
+    }
+
+    &__group input:active,
+    &__group input:valid {
+        &:not([type="submit"]){
+        background-color: #FFFFFF;
+        }
+    }
+
+    &__group textarea:hover {
+        border: 4px solid #E5E5E5;
+        background-color: #E5E5E5;
+    }
+
+    &__group textarea:active,
+    &__group textarea:enabled {
+        background-color: #FFFFFF;
+    }
+
 
     &__user-name {
         display: flex;
         flex-wrap: wrap;
     }
 
-    &__user-name input,
-    &__contacts input {
+    &__user-name input {
         height: 30px;
         margin-bottom: 14px;
+    }
+
+    &__contacts input {
+        height: 30px;
     }
 
     &__label {
         font-weight: 400;
         font-size: 14px;
 
-        padding-right: 10px;
+        padding-right: 14px;
     }
 
     &__contacts &__label {
-        padding-bottom: 10px;
+        margin-top: 0;
+        padding-bottom: 16px;
         padding-left: 22px;
         padding-right: 22px;
-
-        align-self: flex-start;
+        line-height: 10px;
     }
 
     &__contacts-wrapper {
@@ -72,22 +103,40 @@
         box-sizing: border-box;
 
         width: 100%;
-        height: 58px;
+        min-height: 58px;
         padding: 0;
         margin: 0;
+        margin-bottom: 16px;
+    }
+
+    &__contacts-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__contacts-wrapper &__label {
+        align-self: flex-start;
+    }
+
+    &__contacts-wrapper:last-child {
+        margin-bottom: 7px;
     }
 
     &__contacts-wrapper input {
         width: 100%;
         height: 58px;
         padding-right: 80px;
+        padding-left: 21px;
+        padding-top: 18px;
         box-sizing: border-box;
+        font-family: inherit;
+        font-size: 18px;
     }
 
     &__phone::before {
         content: "";
         position: absolute;
-        top: 0;
+        bottom: 0;
         right: 0;
 
         width: 58px;
@@ -102,7 +151,7 @@
     &__email::before {
         content: "";
         position: absolute;
-        top: 0;
+        bottom: 0;
         right: 0;
 
         width: 58px;
@@ -121,6 +170,15 @@
         align-items: flex-start;
     }
 
+    &__impression &__title {
+        margin-bottom: 17px;
+    }
+
+    &__attraction &__title {
+        line-height: 22px;
+        margin-bottom: 17px;
+    }
+
     input[type="radio"] + &__control-mark {
         position: absolute;
         left: 0;
@@ -130,7 +188,7 @@
         height: 52px;
 
         border-radius: 50%;
-        background-color: @light-grey;
+        background-color: #f2f2f2;
         cursor: pointer;
     }
 
@@ -145,7 +203,7 @@
         width: 21px;
         height: 21px;
 
-        background-color: darken(@light-grey, 70%);
+        background-color: #333333;
     }
 
     input[type="checkbox"] + &__control-mark {
@@ -157,28 +215,52 @@
         height: 46px;
 
         border-radius: 5%;
-        border: 4px solid @light-grey;
-        background-color: @light-grey;
+        border: 4px solid #f2f2f2;
+        background-color: #f2f2f2;
         cursor: pointer;
     }
 
-    input[type="checkbox"]:checked + &__control-mark::before {
-        content: "";
-        position: absolute;
+    &__control-mark svg {
+        display: none;
+        position: relative;
         top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
 
-        width: 24px;
-        height: 17px;
-        background-image: url("../img/icon/checkbox-on.svg");
-        background-position: center;
+        transform: translateY(-50%);
+        color: #333333;
+    }
+
+    input[type="checkbox"]:checked + &__control-mark svg {
+        display: inline;
+    }
+
+    input[type="checkbox"]:hover + &__control-mark,
+    input[type="checkbox"]:focus + &__control-mark,
+    input[type="radio"]:hover + &__control-mark,
+    input[type="radio"]:focus + &__control-mark {
+        background-color: #E5E5E5;
+        border-color: #E5E5E5;
+    }
+
+    input[type="checkbox"]:active + &__control-mark,
+    input[type="radio"]:active + &__control-mark,
+    input[type="checkbox"]:checked:active + &__control-mark,
+    input[type="radio"]:checked:active + &__control-mark {
+        background-color: #D5D5D5;
+        border-color: #D5D5D5;
+    }
+
+    input[type="radio"]:active + &__control-mark::before {
+        background-color: fade(#333333, 30%);
+    }
+
+    input[type="checkbox"]:active + &__control-mark svg {
+        color: fade(#333333, 30%);
     }
 
     &__control-title {
         font-weight: 700;
         font-size: 18px;
-        text-transform: capitalize;
+        text-transform: none;
         cursor: pointer;
 
         margin-left: 80px;
@@ -189,11 +271,25 @@
     }
 
     &__checkbox-group &__item {
-        margin-bottom: 43px;
+        margin-bottom: 55px;
+    }
+
+    &__radio-group &__item:last-child {
+        margin-bottom: 21px;
+    }
+
+    &__checkbox-group &__item:last-child {
+        margin-bottom: 18px;
     }
 
     &__group textarea {
-        min-height: 160px;
+        font-size: 18px;
+        padding: 15px 20px;
+        line-height: 24px;
+        min-height: 130px;
+        transform: translateY(-5px);
+
+        margin-bottom: 6px;
     }
 
     &__impression,
@@ -217,7 +313,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
+    }
+
+    &__item-name:last-child {
+        margin-bottom: 2px;
     }
 
     &__item-name input {
@@ -233,11 +333,25 @@
         background-color: @light-blue;
         color: #ffffff;
         border: none;
-        padding: 14px 22px;
+        padding: 15px 22px;
         font-size: inherit;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 26px;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+
+    &__group &__button:hover {
+        background-color: darken(@light-blue, 20%);
+    }
+
+    &__group &__button:active {
+        background-color: darken(@light-blue, 30%);
+        color: fade(#ffffff, 30%);
+    }
+
+    &__group &__button:disabled {
+        background-color: @light-grey;
     }
 }
 
@@ -247,6 +361,8 @@
         flex-wrap: wrap;
         padding: 0 60px;
         border: none;
+        margin-top: 86px;
+        margin-bottom: 0;
 
         &__group {
             border: none;
@@ -267,8 +383,13 @@
         }
 
         &__impression &__title {
-            margin-bottom: 52px;
+            text-align: left;
+            margin-bottom: 71px;
             padding: 0;
+        }
+
+        &__impression &__control-title {
+            margin-left: 75px;
         }
 
         &__user-name {
@@ -282,12 +403,18 @@
         }
 
         &__user-name &__title {
-            margin-bottom: 34px;
+            margin-bottom: 53px;
             padding: 0;
+            text-align: left;
+        }
+
+        &__user-name input {
+            font-size: 18px;
+            padding: 15px 22px;
         }
 
         &__radio-group &__item {
-            margin-bottom: 50px;
+            margin-bottom: 52px;
         }
 
         &__radio-group &__item:last-child {
@@ -296,22 +423,29 @@
 
         &__contacts {
             border-top: 1px solid @light-grey;
-            margin-bottom: 51px;
+            margin-bottom: 40px;
         }
 
         &__contacts &__title {
-            padding: 0;
+            padding: 0 60px;
 
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        &__contacts &__phone {
+            margin-bottom: 28px;
         }
 
         &__attraction {
             border-top: 1px solid @light-grey;
+
+            margin-bottom: 18px;
         }
 
         &__attraction &__title {
-            padding: 0;
-            margin-bottom: 40px;
+            padding: 0 45px;
+            margin-bottom: 55px;
+            line-height: 29px;
         }
 
 
@@ -322,24 +456,31 @@
             flex-wrap: wrap;
             justify-content: space-between;
 
-            padding: 0 130px;
+            padding: 0;
+            padding-left: 95px;
+            padding-right: 33px;
         }
 
         &__checkbox-group &__item {
             display: flex;
             box-sizing: border-box;
-            margin-bottom: 60px;
+            margin-bottom: 65px;
             width: 50%;
         }
 
         &__emotions {
             border-top: 1px solid @light-grey;
-            margin-bottom: 58px;
+            margin-bottom: 47px;
         }
 
         &__emotions &__title {
-            padding: 0;
-            margin-bottom: 54px;
+            padding: 0 76px;
+            margin-bottom: 59px;
+        }
+
+        &__emotions textarea {
+            padding: 20px 20px;
+            min-height: 120px;
         }
 
         &__button-group {
@@ -362,6 +503,7 @@
             font-size: 14px;
             font-weight: normal;
             text-align: end;
+            top: 14px;
 
             color: #333333;
         }
@@ -378,6 +520,11 @@
 @media (min-width: @desktop-width) {
     .feedback-form {
         padding: 0 120px;
+        margin: 0;
+
+        &__impression &__title {
+            padding-left: 80px;
+        }
 
         &__user-name {
             padding-left: 79px;
@@ -391,15 +538,24 @@
         &__contacts {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 21px;
         }
 
         &__contacts-wrapper {
             width: 50%;
+            flex-direction: row;
+        }
+
+        &__contacts &__title {
+            margin-bottom: 70px;
         }
 
         &__contacts &__label {
-            padding-bottom: 0;
-            margin: auto 0;
+            padding: 0;
+            margin: 0;
+            padding-right: 16px;
+            padding-top: 21px;
         }
 
         &__label-email {
@@ -420,6 +576,10 @@
 
         &__checkbox-group &__item {
             width: auto;
+        }
+
+        &__button-group {
+            margin-bottom: 67px;
         }
     }
 }
