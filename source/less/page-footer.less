@@ -28,7 +28,7 @@
     &__item {
         padding: 0;
         margin: 0;
-        margin-bottom: 45px;
+        margin-bottom: 40px;
     }
 
     &__item:not(:last-child) {
@@ -36,40 +36,51 @@
     }
 
     &__link {
+        position: relative;
         display: block;
         cursor: pointer;
         background-color: @light-blue;
         width: 46px;
         height: 48px;
+        color: #ffffff;
     }
 
-    &__twitter {
-        background-image: url("../img/icon/icon-twitter.svg");
-        background-position: center;
-        background-repeat: no-repeat;
+    &__link:hover {
+        background-color: darken(@light-blue, 20%);
     }
 
-    &__facebook {
-        background-image: url("../img/icon/icon-facebook.svg");
-        background-position: center;
-        background-repeat: no-repeat;
+    &__link:active {
+        background-color: darken(@light-blue, 30%);
+        color: fade(#ffffff, 30%);
     }
 
-    &__youtube {
-        background-image: url("../img/icon/icon-youtube.svg");
-        background-position: center;
-        background-repeat: no-repeat;
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
     }
 
     &__copyright {
         display: flex;
         align-items: center;
-        line-height: 26px;
+        line-height: 18px;
+
+        margin-bottom: 19px;
     }
 
     &__copyright-link {
         margin-left: 12px;
         cursor: pointer;
+        color: #000000;
+    }
+
+    &__copyright-link:hover {
+        color: @light-blue;
+    }
+
+    &__copyright-link:active {
+        color: fade(#000000, 30%);
     }
 }
 
@@ -82,13 +93,49 @@
 
         &__wrapper {
             flex-direction: row;
-            justify-content: space-around;
-            align-items: baseline;
+            justify-content: space-between;
             flex-wrap: wrap;
+
+            margin: 0 8%;
+        }
+
+        &__hashtag {
+            transform: translateY(-3px);
         }
 
         &__list {
-            align-self: center;
+            transform: translateX(-5px) translateY(-2px);
+        }
+
+        &__copyright {
+            transform: translateY(-12px) translateX(1px);
+        }
+
+        &__copyright-link {
+            margin-left: 11px;
+            transform: translateY(2px);
+        }
+    }
+}
+
+
+@media (min-width: @desktop-width) {
+    .page-footer {
+        &__wrapper {
+            margin: 0 10%;
+        }
+
+        &__list {
+            transform: translateX(-5px);
+        }
+
+        &__copyright {
+            transform: translateY(-12px) translateX(1px);
+        }
+
+        &__copyright-link {
+            margin-left: 13px;
+            transform: translateY(4px);
         }
     }
 }

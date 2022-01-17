@@ -9,19 +9,22 @@
     background-repeat: no-repeat;
 
     &__title {
-        font-size: 21px;
+        font-size: 18px;
 
         text-align: left;
         margin: 0;
         padding: 0;
-        padding-top: 12px;
-        padding-bottom: 28px;
+        padding-top: 7px;
+        padding-bottom: 14px;
     }
 
     &__description {
         text-align: left;
         margin: 0;
         padding: 0;
+
+        font-size: 14px;
+        line-height: 21px;
     }
 }
 
@@ -39,20 +42,30 @@
         padding-top: 95px;
 
         background-position: top center;
-        background-size: 64px 75px;
+        background-size: 76px 69px;
+
+        &__title {
+            font-size: 21px;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 23px;
+        }
 
         &__description {
+            width: 80%;
             font-size: 14px;
             margin: 0;
             padding: 0;
 
             text-align: center;
         }
+    }
+}
 
-        &__title {
-            padding: 0;
-            margin: 0;
-            margin-bottom: 25px;
+@media (min-width: @desktop-width) {
+    .food {
+        &__description {
+            width: 95%;
         }
     }
 }
