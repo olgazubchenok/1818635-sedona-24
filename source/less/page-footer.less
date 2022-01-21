@@ -1,141 +1,134 @@
 .page-footer {
-    width: 100%;
-    padding-top: 28px;
+  width: 100%;
+  padding-top: 28px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__hashtag {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 33px;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 150px;
+  }
+
+  &__item {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 6px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    background-color: @light-blue;
+    width: 46px;
+    height: 48px;
+    color: #ffffff;
+  }
+
+  &__link:hover {
+    background-color: darken(@light-blue, 20%);
+  }
+
+  &__link:active {
+    background-color: darken(@light-blue, 30%);
+    color: fade(#ffffff, 30%);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+    line-height: 18px;
+    margin-bottom: 19px;
+  }
+
+  &__copyright-link {
+    margin-left: 12px;
+    cursor: pointer;
+    color: #000000;
+  }
+
+  &__copyright-link:hover {
+    color: @light-blue;
+  }
+
+  &__copyright-link:active {
+    color: fade(#000000, 30%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding-top: 36px;
 
     &__wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 8%;
     }
 
     &__hashtag {
-        font-weight: 700;
-        font-size: 21px;
-        line-height: 26px;
-
-        margin-bottom: 33px;
+      transform: translateY(-3px);
     }
 
     &__list {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-
-        width: 150px;
-    }
-
-    &__item {
-        padding: 0;
-        margin: 0;
-        margin-bottom: 40px;
-    }
-
-    &__item:not(:last-child) {
-        margin-right: 6px;
-    }
-
-    &__link {
-        position: relative;
-        display: block;
-        cursor: pointer;
-        background-color: @light-blue;
-        width: 46px;
-        height: 48px;
-        color: #ffffff;
-    }
-
-    &__link:hover {
-        background-color: darken(@light-blue, 20%);
-    }
-
-    &__link:active {
-        background-color: darken(@light-blue, 30%);
-        color: fade(#ffffff, 30%);
-    }
-
-    &__icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-5px) translateY(-2px);
     }
 
     &__copyright {
-        display: flex;
-        align-items: center;
-        line-height: 18px;
-
-        margin-bottom: 19px;
+      transform: translateY(-12px) translateX(1px);
     }
 
     &__copyright-link {
-        margin-left: 12px;
-        cursor: pointer;
-        color: #000000;
+      margin-left: 11px;
+      transform: translateY(2px);
     }
-
-    &__copyright-link:hover {
-        color: @light-blue;
-    }
-
-    &__copyright-link:active {
-        color: fade(#000000, 30%);
-    }
-}
-
-
-
-@media (min-width: @tablet-width) {
-    .page-footer {
-        padding-top: 36px;
-
-
-        &__wrapper {
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-
-            margin: 0 8%;
-        }
-
-        &__hashtag {
-            transform: translateY(-3px);
-        }
-
-        &__list {
-            transform: translateX(-5px) translateY(-2px);
-        }
-
-        &__copyright {
-            transform: translateY(-12px) translateX(1px);
-        }
-
-        &__copyright-link {
-            margin-left: 11px;
-            transform: translateY(2px);
-        }
-    }
+  }
 }
 
 
 @media (min-width: @desktop-width) {
-    .page-footer {
-        &__wrapper {
-            margin: 0 10%;
-        }
-
-        &__list {
-            transform: translateX(-5px);
-        }
-
-        &__copyright {
-            transform: translateY(-12px) translateX(1px);
-        }
-
-        &__copyright-link {
-            margin-left: 13px;
-            transform: translateY(4px);
-        }
+  .page-footer {
+    &__wrapper {
+      margin: 0 10%;
     }
+
+    &__list {
+      transform: translateX(-5px);
+    }
+
+    &__copyright {
+      transform: translateY(-12px) translateX(1px);
+    }
+
+    &__copyright-link {
+      margin-left: 13px;
+      transform: translateY(4px);
+    }
+  }
 }

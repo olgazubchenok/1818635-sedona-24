@@ -1,40 +1,37 @@
 .intro {
-    margin-bottom: 32px;
-    background-color: @intro-background;
-    background-image: url("../img/back-intro.jpg");
+  margin-bottom: 32px;
+  background-color: @intro-background;
+  background-image: url("../img/back-intro.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-intro@2x.jpg");
+    background-size: 1200px auto;
+  }
+
+  &__bg-wrapper {
+    min-height: 389px;
+    background-image: url("../img/intro-triangle.svg");
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: bottom center;
+  }
 
-    @media (min-resolution: 2dppx) {
-        background-image: url("../img/back-intro@2x.jpg");
-        background-size: 1200px auto;
-    }
+  &__image {
+    margin: 0 auto;
+    margin-top: 90px;
+  }
+}
 
+@media (min-width: @tablet-width) {
+  .intro {
     &__bg-wrapper {
-        min-height: 389px;
-
-        background-image: url(../img/intro-triangle.svg);
-        background-repeat: no-repeat;
-        background-position: bottom center;
+      min-height: 518px;
     }
 
     &__image {
-        margin: 0 auto;
-        margin-top: 90px;
+      margin: 0 auto;
+      margin-top: 77px;
     }
-}
-
-
-
-@media (min-width: @tablet-width) {
-    .intro {
-        &__bg-wrapper {
-            min-height: 518px;
-        }
-
-        &__image {
-            margin: 0 auto;
-            margin-top: 77px;
-        }
-    }
+  }
 }
