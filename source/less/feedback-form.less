@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   border-top: 1px solid @light-grey;
-  margin-top: 17px;
+  margin-top: 15px;
   margin-bottom: 29px;
 
   &__title {
@@ -31,10 +31,10 @@
   &__group textarea {
     background-color: @light-grey;
     border: 4px solid @light-grey;
-    padding: 15px 25px;
+    padding: 15px 20px;
     font-family: inherit;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     color: #000000;
   }
 
@@ -62,15 +62,9 @@
     background-color: #ffffff;
   }
 
-
   &__user-name {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  &__user-name input {
-    height: 30px;
-    margin-bottom: 14px;
   }
 
   &__contacts input {
@@ -265,7 +259,7 @@
 
   &__group textarea {
     font-size: 18px;
-    padding: 15px 20px;
+    padding: 12px 18px;
     line-height: 24px;
     min-height: 130px;
     transform: translateY(-5px);
@@ -293,7 +287,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   &__item-name:last-child {
@@ -341,7 +335,7 @@
     padding: 0 60px;
     border: none;
     margin-top: 86px;
-    margin-bottom: 0;
+    margin-bottom: 4px;
 
     &__group {
       border: none;
@@ -452,8 +446,8 @@
       margin-bottom: 59px;
     }
 
-    &__emotions textarea {
-      padding: 20px 20px;
+    &__group textarea {
+      padding: 15px 20px;
       min-height: 120px;
     }
 
@@ -464,8 +458,11 @@
       margin-bottom: 60px;
     }
 
-    &__button {
+    &__button-group &__button {
       width: 50%;
+      padding: 13px 22px;
+      padding-top: 19px;
+      padding-left: 20px;
     }
 
     &__qualification {
@@ -555,6 +552,7 @@
     }
 
     &__button-group {
+      margin-top: 5px;
       margin-bottom: 67px;
     }
   }
