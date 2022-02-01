@@ -1,0 +1,37 @@
+.intro {
+  margin-bottom: 32px;
+  background-color: @intro-background;
+  background-image: url("../img/back-intro.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-intro@2x.jpg");
+    background-size: 1200px auto;
+  }
+}
+
+.intro__bg-wrapper {
+  min-height: 389px;
+  background-image: url("../img/intro-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.intro__image {
+  margin: 0 auto;
+  margin-top: 90px;
+}
+
+@media (min-width: @tablet-width) {
+  .intro__bg-wrapper {
+    min-height: 518px;
+  }
+
+  .intro__image {
+    margin: 0 auto;
+    margin-top: 77px;
+    width: 460px;
+    height: 350px;
+  }
+}
