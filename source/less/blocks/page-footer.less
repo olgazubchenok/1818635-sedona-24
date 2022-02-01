@@ -1,0 +1,137 @@
+.page-footer {
+  width: 100%;
+  padding-top: 28px;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer__hashtag {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  margin-bottom: 33px;
+}
+
+.page-footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 150px;
+}
+
+.page-footer__item {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+.page-footer__link {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  background-color: @light-blue;
+  width: 46px;
+  height: 48px;
+  color: #ffffff;
+
+  &:hover {
+    background-color: darken(@light-blue, 20%);
+  }
+
+  &:active {
+    background-color: darken(@light-blue, 30%);
+    color: fade(#ffffff, 30%);
+  }
+}
+
+.page-footer__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+  line-height: 18px;
+  margin-bottom: 19px;
+}
+
+.page-footer__copyright-link {
+  margin-left: 12px;
+  cursor: pointer;
+  color: #000000;
+
+  &:hover {
+    color: @light-blue;
+  }
+
+  &:active {
+    color: fade(#000000, 30%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding-top: 36px;
+  }
+
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 8%;
+  }
+
+  .page-footer__wrapper-main {
+    transform: translateY(-10px);
+  }
+
+  .page-footer__hashtag {
+    transform: translateY(-3px);
+  }
+
+  .page-footer__list {
+    transform: translateX(-5px) translateY(-2px);
+  }
+
+  .page-footer__copyright {
+    transform: translateY(-12px) translateX(1px);
+  }
+
+  .page-footer__copyright-link {
+    margin-left: 11px;
+    transform: translateY(2px);
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    margin: 0 10%;
+  }
+
+  .page-footer__list {
+    transform: translateX(-5px);
+  }
+
+  .page-footer__copyright {
+    transform: translateY(-12px) translateX(1px);
+  }
+
+  .page-footer__copyright-link {
+    margin-left: 13px;
+    transform: translateY(4px);
+  }
+}

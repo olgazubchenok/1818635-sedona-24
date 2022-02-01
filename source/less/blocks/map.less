@@ -1,0 +1,22 @@
+.map {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.map iframe {
+  border: none;
+  display: block;
+  width: 100%;
+  height: 350px;
+  background-color: @light-grey;
+  background-image: url("../../img/desktop/map-desktop.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/desktop/map-desktop.png@2x.png");
+    background-size: 1200px auto;
+  }
+}
