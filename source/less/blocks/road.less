@@ -1,0 +1,57 @@
+.road {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  background-color: @light-grey;
+  border-bottom: 1px solid darken(@light-grey, 10%);
+}
+
+.road__title {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 7px;
+  padding: 0;
+}
+
+.road__description {
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+  line-height: 21px;
+}
+
+@media (min-width: @tablet-width) {
+  .road {
+    border: none;
+    width: 55%;
+    margin: 0;
+    padding: 0;
+    padding-top: 41px;
+    padding-bottom: 39px;
+  }
+
+  .road__title {
+    font-size: 21px;
+    line-height: 27px;
+    margin-bottom: 9px;
+  }
+
+  .road__description {
+    font-size: 14px;
+    margin-top: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .road {
+    width: 65%;
+    padding-top: 39px;
+    padding-bottom: 60px;
+  }
+
+  .road__title {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
